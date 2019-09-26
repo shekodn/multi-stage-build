@@ -1,0 +1,18 @@
+version: '2.4'
+
+services:
+  app-development:
+    build:
+      context: .
+      target: development
+    image: container_registry/app:development
+  app-test:
+    build: 
+      context: .
+      target: test
+    image: container_registry/app:test
+  app-production:
+    build:
+      context: .
+      target: production
+    image: container_registry/app:production
